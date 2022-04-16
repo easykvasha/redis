@@ -26,3 +26,20 @@ Information about redis db
 
 # Выполнение.
 1. Сохраним сначала в формате строки. Для это написал скрипт на python - [вставка строками](https://github.com/easykvasha/redis/blob/main/main.py)
+
+Замеры времени показали следующий результат: ![Результат для строчек](https://github.com/easykvasha/redis/blob/main/string.png)
+
+Также написан [код на чтение](https://github.com/easykvasha/redis/blob/main/load_string.py)
+
+Замер времени на чтение для строки: ![Чтение строчек](https://github.com/easykvasha/redis/blob/main/string_load.png)
+
+2. Теперь будет сохрание для сложной структуры (ключам были даны названия для простоты) был написан [следующий код](https://github.com/easykvasha/redis/blob/main/hset.py)
+
+После замеров времени получили ![Результат для для других структур](https://github.com/easykvasha/redis/blob/main/hset.png)
+
+Также написан [код на чтение](https://github.com/easykvasha/redis/blob/main/load_stucture.py)
+
+Замер времени на чтение для структур: ![Чтение структур](https://github.com/easykvasha/redis/blob/main/hset_load.png)
+
+===================
+# Настройка redis кластера на 3-х нодах
