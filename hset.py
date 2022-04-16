@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     DEBUG_UPLOAD_LIMIT = 1000
 
-    r = redis.StrictRedis(host='localhost', port=6379, db=0)
+    r = redis.StrictRedis(host='localhost', port=6379, db=2)
 
     print('Upload json as complex structure.')
 
