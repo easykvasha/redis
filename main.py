@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     DEBUG_UPLOAD_LIMIT = 1000
 
-    r = redis.StrictRedis(host='localhost', port=6379, db=0)
+    r = redis.StrictRedis(host='localhost', port=6379, db=1)
 
     print('Upload json as true-string.')
     with open('data.json', encoding='cp1251') as input_file:
