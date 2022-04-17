@@ -41,5 +41,25 @@ Information about redis db
 
 Замер времени на чтение для структур: ![Чтение структур](https://github.com/easykvasha/redis/blob/main/hset_load.png)
 
+## Вывод:
+Вставка сведений в виде строк, так и их выборка - быстрее, чем использование специальных структур.
+
 ===================
 # Настройка redis кластера на 3-х нодах
+Рудем работать с помощью minikube и kubernetes.
+1. Создаем кластер
+```
+minikube start --cpus=4 --memory=4000 --nodes=4  --kubernetes-version v1.23.1  
+```
+
+2. С помощью конфигурации получаем отказоустойчивый кластер
+ ```
+ kubectl get po -n redis                                            
+
+NAME           READY   STATUS    RESTARTS   AGE
+redis-node-0   3/3     Running   0          42s
+redis-node-1   3/3     Running   0          28s
+redis-node-2   3/3     Running   0          19s
+```
+
+Как затюнить timeout'ы не понял((((
